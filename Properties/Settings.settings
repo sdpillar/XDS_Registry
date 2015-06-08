@@ -23,9 +23,6 @@
     <Setting Name="BrokerURI" Type="System.String" Scope="User">
       <Value Profile="(Default)">http://localhost:8096/HSSBroker</Value>
     </Setting>
-    <Setting Name="NotificationRecipient" Type="System.String" Scope="User">
-      <Value Profile="(Default)">http://192.168.43.37:8092/</Value>
-    </Setting>
     <Setting Name="HashCode" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">9999</Value>
     </Setting>

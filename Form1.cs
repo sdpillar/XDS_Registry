@@ -62,12 +62,29 @@ namespace XdsRegistry
                     {
                         logWindow.AppendText(DateTime.Now.ToString("HH:mm:ss.fff") + ": Unable to connect to Registry database at " + Reg.dataSource + "...\n");
                     }
+
+                    List<string> notifyEndPoints = new List<string>();
+                    foreach (var sub in db.MySubscriptions)
+                    {
+                        string endpoint = sub.ConsumerReferenceAddress;
+                        if (!notifyEndPoints.Contains(endpoint))
+                        {
+                            notifyEndPoints.Add(endpoint);
+                        }
+                    }
+
+                    foreach (string endpoint in notifyEndPoints)
+                    {
+                        string host = endpoint.Split(':')[0];
+                        int port = int.Parse(endpoint.Split(':')[1]);
+                        testConnection("Notify Endpoint", host, port);
+                    }
                 }
-                testConnections();
+                testConnection("ATNA", Reg.atnaHost, Reg.atnaPort);
             }
         }
 
-        private void testConnections()
+        /*private void testConnections()
         {
             logWindow.AppendText("--- --- ---\n");
             //test ATNA connection
@@ -87,7 +104,7 @@ namespace XdsRegistry
                     testConnection("Notification Recipient", hostname, recipientPort);
                 }
             }
-        }
+        }*/
 
         private bool testConnection(string hostname, string host, int port)
         {
@@ -126,7 +143,7 @@ namespace XdsRegistry
             {
                 Reg.StopListen();
                 logWindow.AppendText("--- --- ---\n");
-                logWindow.AppendText(DateTime.Now.ToString("HH:mm:ss.fff") + ": Refreshing values...\n");
+                logWindow.AppendText(DateTime.Now.ToString("HH:mm:ss.fff") + ": Refreshing settings...\n");
                 SetupProperties();
             }
             return base.ProcessCmdKey(ref msg, keyData);
@@ -178,7 +195,6 @@ namespace XdsRegistry
                 SetupProperties();
                 currentDate = DateTime.Now;
             }
-            testConnections();
         }
     }
 }

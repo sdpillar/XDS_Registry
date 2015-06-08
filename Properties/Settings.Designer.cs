@@ -109,18 +109,6 @@ namespace XdsRegistry.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://192.168.43.37:8092/")]
-        public string NotificationRecipient {
-            get {
-                return ((string)(this["NotificationRecipient"]));
-            }
-            set {
-                this["NotificationRecipient"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("9999")]
         public int HashCode {
             get {

@@ -46,8 +46,6 @@
             this.txtAtnaHost = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.txtRecipient = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.txtBroker = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.cmdSaveSettings = new System.Windows.Forms.Button();
@@ -68,7 +66,7 @@
             // 
             // cmdClose
             // 
-            this.cmdClose.Location = new System.Drawing.Point(234, 484);
+            this.cmdClose.Location = new System.Drawing.Point(236, 444);
             this.cmdClose.Name = "cmdClose";
             this.cmdClose.Size = new System.Drawing.Size(75, 23);
             this.cmdClose.TabIndex = 0;
@@ -220,33 +218,14 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.txtRecipient);
-            this.groupBox4.Controls.Add(this.label7);
             this.groupBox4.Controls.Add(this.txtBroker);
             this.groupBox4.Controls.Add(this.label8);
             this.groupBox4.Location = new System.Drawing.Point(12, 386);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(297, 81);
+            this.groupBox4.Size = new System.Drawing.Size(297, 52);
             this.groupBox4.TabIndex = 4;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Notifications";
-            // 
-            // txtRecipient
-            // 
-            this.txtRecipient.Location = new System.Drawing.Point(104, 45);
-            this.txtRecipient.Name = "txtRecipient";
-            this.txtRecipient.Size = new System.Drawing.Size(178, 20);
-            this.txtRecipient.TabIndex = 3;
-            this.txtRecipient.Leave += new System.EventHandler(this.txtRecipient_Leave);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(15, 45);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(61, 13);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "Receipient:";
             // 
             // txtBroker
             // 
@@ -267,7 +246,7 @@
             // 
             // cmdSaveSettings
             // 
-            this.cmdSaveSettings.Location = new System.Drawing.Point(85, 484);
+            this.cmdSaveSettings.Location = new System.Drawing.Point(87, 444);
             this.cmdSaveSettings.Name = "cmdSaveSettings";
             this.cmdSaveSettings.Size = new System.Drawing.Size(130, 23);
             this.cmdSaveSettings.TabIndex = 5;
@@ -335,7 +314,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(320, 516);
+            this.ClientSize = new System.Drawing.Size(319, 477);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.cmdSaveSettings);
@@ -384,8 +363,6 @@
         private System.Windows.Forms.TextBox txtAtnaHost;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.TextBox txtRecipient;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtBroker;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button cmdSaveSettings;

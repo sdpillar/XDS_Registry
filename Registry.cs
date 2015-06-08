@@ -34,7 +34,6 @@ namespace XdsRegistry
                 atnaHost = Properties.Settings.Default.ATNAHost;
                 atnaPort = Properties.Settings.Default.ATNAPort;
                 brokerURI = Properties.Settings.Default.BrokerURI;
-                notificationRecipient = Properties.Settings.Default.NotificationRecipient;
                 return true;
             }
             catch(Exception ex)

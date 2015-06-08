@@ -11,7 +11,6 @@ namespace XdsRegistry
 {
     public partial class frmSettings : Form
     {
-        //bool settingsChanged = false;
         int currentHashValue;
         public frmSettings()
         {
@@ -32,7 +31,7 @@ namespace XdsRegistry
 
         private int CalcuateHash()
         {
-            string[] txtStrings = new string[] { txtDomain.Text, txtDataSource.Text, txtRegistryURI.Text, txtRegistryLog.Text, txtRepositoryId.Text, txtRepositoryPath.Text, txtAtnaHost.Text, txtAtnaPort.Text, txtBroker.Text, txtRecipient.Text };
+            string[] txtStrings = new string[] { txtDomain.Text, txtDataSource.Text, txtRegistryURI.Text, txtRegistryLog.Text, txtRepositoryId.Text, txtRepositoryPath.Text, txtAtnaHost.Text, txtAtnaPort.Text, txtBroker.Text };
             string hashString = String.Concat(txtStrings);
             int hash = hashString.GetHashCode();
             return hash;
@@ -49,7 +48,6 @@ namespace XdsRegistry
             txtAtnaHost.Text = Properties.Settings.Default.ATNAHost;
             txtAtnaPort.Text = Properties.Settings.Default.ATNAPort.ToString();
             txtBroker.Text = Properties.Settings.Default.BrokerURI;
-            txtRecipient.Text = Properties.Settings.Default.NotificationRecipient;
             Properties.Settings.Default.HashCode = CalcuateHash();
             Properties.Settings.Default.Save();
             this.Location = this.Owner.Location;
@@ -90,7 +88,6 @@ namespace XdsRegistry
             Properties.Settings.Default.ATNAHost = txtAtnaHost.Text;
             Properties.Settings.Default.ATNAPort = int.Parse(txtAtnaPort.Text);
             Properties.Settings.Default.BrokerURI = txtBroker.Text;
-            Properties.Settings.Default.NotificationRecipient = txtRecipient.Text;
             Properties.Settings.Default.HashCode = CalcuateHash();
             Properties.Settings.Default.Save();
             cmdSaveSettings.Enabled = false;
@@ -137,11 +134,6 @@ namespace XdsRegistry
         }
 
         private void txtBroker_Leave(object sender, EventArgs e)
-        {
-            HashChanged();
-        }
-
-        private void txtRecipient_Leave(object sender, EventArgs e)
         {
             HashChanged();
         }

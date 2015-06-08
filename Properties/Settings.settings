@@ -1,0 +1,39 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="XdsRegistry.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="RegistryURI" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://localhost:8090/HSSRegistry</Value>
+    </Setting>
+    <Setting Name="RepositoryId" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1.19.6.24.109.42.1.5</Value>
+    </Setting>
+    <Setting Name="RepositoryPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\HSSRepository\</Value>
+    </Setting>
+    <Setting Name="RegistryLog" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\HSSLogs\Registry\</Value>
+    </Setting>
+    <Setting Name="ATNAHost" Type="System.String" Scope="User">
+      <Value Profile="(Default)">localhost</Value>
+    </Setting>
+    <Setting Name="ATNAPort" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">6670</Value>
+    </Setting>
+    <Setting Name="BrokerURI" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://localhost:8096/HSSBroker</Value>
+    </Setting>
+    <Setting Name="NotificationRecipient" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://192.168.43.37:8092/</Value>
+    </Setting>
+    <Setting Name="HashCode" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">9999</Value>
+    </Setting>
+    <Setting Name="AuthDomain" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1.3.6.1.4.1.21367.2005.3.7</Value>
+    </Setting>
+    <Setting Name="DataSource" Type="System.String" Scope="User">
+      <Value Profile="(Default)">HSS-W7-VM001\SQLEXPRESS</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

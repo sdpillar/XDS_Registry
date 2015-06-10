@@ -57,6 +57,7 @@ namespace XdsRegistry
             modelBuilder.Entity<MySubscriptions>().HasKey(t => t.Id);
 
             modelBuilder.Entity<MySubscriptions>().Property(t => t.TerminationTime).HasColumnType("datetime2");
+            modelBuilder.Entity<MySubscriptions>().Property(t => t.SubscriptionDate).HasColumnType("datetime2");
         }
     }
 
@@ -75,6 +76,7 @@ namespace XdsRegistry
     {
         public Guid Id { get; set; }
         public DateTime TerminationTime { get; set; }
+        public DateTime SubscriptionDate { get; set; }
         public String patientId { get; set; }
         public string ConsumerReferenceAddress { get; set; }
         public XdsSubscriptionRequest Query { get; set; }

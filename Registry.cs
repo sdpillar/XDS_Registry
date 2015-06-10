@@ -53,7 +53,6 @@ namespace XdsRegistry
         internal int atnaPort;
         string repositoryId;
         internal string brokerURI;
-        internal string notificationRecipient;
 
         // Home Community ID
         const string HomeCommunityID = "1.2.3.4.5.6.7";
@@ -163,14 +162,13 @@ namespace XdsRegistry
                     {
                         DefaultTerminationTime = DateTime.Now.AddDays(1);
                         mySub.TerminationTime = DefaultTerminationTime;
-
-                        
                     }
                     else
                     {
                         DateTime termTime = SubscriptionRequest.InitialTerminationTime;
                         mySub.TerminationTime = termTime;
                     }
+                    mySub.SubscriptionDate = DateTime.Now;
                     mySub.Query = SubscriptionRequest;
                     mySub.TopicDialect = SubscriptionRequest.Query.QueryType.ToString();
                     mySub.ConsumerReferenceAddress = SubscriptionRequest.ConsumerReferenceAddress;

@@ -39,19 +39,19 @@
             // logWindow
             // 
             this.logWindow.BackColor = System.Drawing.Color.White;
-            this.logWindow.Location = new System.Drawing.Point(2, 2);
+            this.logWindow.Location = new System.Drawing.Point(0, 0);
             this.logWindow.Multiline = true;
             this.logWindow.Name = "logWindow";
             this.logWindow.ReadOnly = true;
             this.logWindow.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.logWindow.Size = new System.Drawing.Size(523, 456);
+            this.logWindow.Size = new System.Drawing.Size(532, 535);
             this.logWindow.TabIndex = 5;
             // 
             // btnClose
             // 
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.Location = new System.Drawing.Point(12, 504);
+            this.btnClose.Location = new System.Drawing.Point(12, 577);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(130, 27);
             this.btnClose.TabIndex = 6;
@@ -63,7 +63,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 475);
+            this.label1.Location = new System.Drawing.Point(13, 548);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(109, 16);
             this.label1.TabIndex = 7;
@@ -73,7 +73,7 @@
             // 
             this.lblRegUri.AutoSize = true;
             this.lblRegUri.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegUri.Location = new System.Drawing.Point(122, 475);
+            this.lblRegUri.Location = new System.Drawing.Point(122, 548);
             this.lblRegUri.Name = "lblRegUri";
             this.lblRegUri.Size = new System.Drawing.Size(0, 16);
             this.lblRegUri.TabIndex = 8;
@@ -88,7 +88,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(525, 543);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(530, 607);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblRegUri);
             this.Controls.Add(this.btnClose);
@@ -96,6 +97,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.Name = "frmRegistry";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.Text = "HSS XDS Registry";
             this.ResumeLayout(false);
             this.PerformLayout();

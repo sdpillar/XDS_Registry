@@ -82,6 +82,7 @@ namespace XdsRegistry
         public XdsSubscriptionRequest Query { get; set; }
         public string TopicDialect { get; set; }
         public string CancerType { get; set; }
+        public Boolean ByotronicsFlag { get; set; }
     }
 
     //public class ContextInitializer : DropCreateDatabaseAlways<XdsDataBase>

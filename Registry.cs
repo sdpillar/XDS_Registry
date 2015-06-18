@@ -174,7 +174,9 @@ namespace XdsRegistry
                     mySub.ConsumerReferenceAddress = SubscriptionRequest.ConsumerReferenceAddress;
                     mySub.CancerType = SubscriptionRequest.Query.DocumentEntryHealthcareFacilityTypeCodes[0].CodeValue;
                     mySub.patientId = patId;
+                    mySub.ByotronicsFlag = false;
                     db.MySubscriptions.Add(mySub);
+
                     db.SaveChanges();
 
                     XdsAudit.UserAuthentication(atnaTest, false);
@@ -185,8 +187,8 @@ namespace XdsRegistry
             catch (Exception ex)
             {
                 XdsAudit.UserAuthentication(atnaTest, false);
-                LogMessageEvent(DateTime.Now.ToString("HH:mm:ss.fff") + ": throwing general exception...");
-                return new XdsSubscriptionResponse(ex, XdsObjects.Enums.XdsErrorCode.GeneralException);
+                LogMessageEvent(DateTime.Now.ToString("HH:mm:ss.fff") + ": error in processing of subscription for patient " + patId + "...");
+                return new XdsSubscriptionResponse(ex, XdsObjects.Enums.XdsErrorCode.XDSSqlError);
             }
             
         }

@@ -59,7 +59,6 @@ namespace XdsRegistry
         XdsDomain atnaTest = new XdsDomain();
         AuditEndpoint myAudit = new AuditEndpoint();
 
-
         #endregion
 
         internal void StartListen()
